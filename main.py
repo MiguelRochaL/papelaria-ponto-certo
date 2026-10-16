@@ -26,10 +26,7 @@ def consultar_produto(produtos):
     i = 0
     while i < len(produtos):
         if produtos[i][0].lower() == nome_busca.lower():
-            print(
-                f"Produto encontrado: "
-                f"{produtos[i][0]} - R$ {produtos[i][1]:.2f}"
-            )
+            print(f"Produto encontrado: "f"{produtos[i][0]} - R$ {produtos[i][1]:.2f}")
             encontrado = True
         i += 1
     if not encontrado:
@@ -39,11 +36,11 @@ def listar_produtos(produtos):
     numero = 1
     print('=== Produtos cadastrados ===')
     for produto in produtos:
-        print(f'{numero}. {produto[0]} R$ {str(produto[1]).replace('.', ',')}')
+        print(f'{numero} . {produto[0]} {'.' * (15-len(produto[0]))} R$ {str(produto[1]).replace('.', ',')}')
         numero += 1
 
 
-produtos = [['Caneta', 2.5], ['Caderno', 18.9], ['Borracha', 4.3]]
+produtos = [['Caneta', 2.25], ['Caderno', 18.90], ['Borracha', 3.00]]
 continuar = True
 
 while continuar:
